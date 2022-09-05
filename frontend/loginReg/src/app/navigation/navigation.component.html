@@ -1,0 +1,49 @@
+<mat-toolbar class="app-header" xmlns="http://www.w3.org/1999/html" style=" box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px 0 rgba(0, 0, 0, 0), 0px 0px 0px 0px rgba(0, 0, 0, 0) ">
+  <span>
+    <button
+        type="button"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon style="color: #5f6368;" aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <button mat-icon-button style="margin-left: 10px">
+        <mat-icon aria-label="Side nav toggle icon">dashboard</mat-icon>
+     </button>
+     <button mat-icon-button>
+        <a class="title">Trello Board</a>
+     </button>
+  </span>
+
+  <span class="nav-tool-items">
+     <a disableRipple mat-flat-button routerLink="."><i class="material-icons">refresh</i></a>
+     <a disableRipple mat-flat-button routerLink="."><i class="material-icons">settings_applications</i></a>
+     <button class="profile" color="primary" mat-fab [matMenuTriggerFor]="menu">A</button>
+     <mat-menu #menu="matMenu">
+       <button mat-menu-item (click)="logoutUser()" color="primary">Log out</button>
+     </mat-menu>
+  </span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar></mat-toolbar>
+    <mat-nav-list style="margin-top: 70px; margin-left: 10px;">
+      <a mat-list-item class="item"  routerLink="/home"><i class="material-icons">
+                                             list_alt
+                                             </i><span class="icon">Trello</span></a>
+      <a mat-list-item class="item" routerLink="/notes"><i class="material-icons">
+                                             import_contacts
+                                             </i><span class="icon">Notes</span></a>
+      <a mat-list-item class="item" routerLink="/whiteboard"><i class="material-icons">
+                                                   desktop_windows
+                                                   </i><span class="icon">White Board</span></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+       <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

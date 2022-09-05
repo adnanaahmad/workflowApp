@@ -1,0 +1,15 @@
+<button class="add" mat-stroked-button color="primary" (click)="addNote()">
+     <i style="padding: 3px 10px 3px 0px; font-size: 33px" class="material-icons">add</i>New</button>
+
+<div class="noteswrapper">
+  <div class="example-boundary">
+    <div *ngFor="let note of notesList;let i = index" [attr.id]="'L' + i"
+      class="example-box" id="dragDrop" cdkDragBoundary=".example-boundary"
+      cdkDrag (cdkDragEnded)="drop($event,i)"
+      [cdkDragFreeDragPosition]="note.axis">
+      {{note.content}}
+    </div>
+  </div>
+</div>
+
+<!-- [style.transform]="'translate3d(' + note.x + 'px, ' + note.y + 'px, ' + ' 0px)'" -->

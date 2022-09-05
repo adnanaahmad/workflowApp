@@ -1,0 +1,79 @@
+.trello{
+  position: absolute;
+  left: 60px;
+}
+.material-icons{
+  color: #3f51b5;
+}
+.login{
+  padding: 0px 20px 0px 20px;
+  border-radius: 50px;
+  border: 0px;
+}
+.mat-toolbar.mat-primary{
+  background: white;
+}
+.title{
+  color: #3f51b5;
+}
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.cards{
+  padding: 48px 40px 48px 36px;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+}
+.form-field{
+  min-width: 300px;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.status{
+  padding: 0px 0px 0px 250px;
+  font-family: fantasy;
+}
+.status-value{
+  padding: 0px 0px 0px 5px;
+  font-family: fantasy;
+  color: #2a3da7;
+}
+.delete{
+  font-family: fantasy;
+}
+.delete-div{
+  margin: 0px 0px 0px 270px;
+}
+.mat-toolbar.mat-primary{
+  background: white;
+}
+.title{
+  color: #3f51b5;
+}
+.sign{
+  color: #202124;
+  font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}

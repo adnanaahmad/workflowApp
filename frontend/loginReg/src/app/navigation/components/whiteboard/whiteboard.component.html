@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+<div style="height: 800px; margin-top: 150px">
+    <canvas-whiteboard class="transparent-style" #canvasWhiteboard
+      [imageUrl]="url"
+      [drawButtonClass]="'drawButtonClass'" [drawButtonText]="'Draw'"
+      [clearButtonClass]="'clearButtonClass'" [clearButtonText]="'Clear'"
+      [undoButtonText]="'Undo'" [undoButtonEnabled]="true"
+      [redoButtonText]="'Redo'" [redoButtonEnabled]="true"
+      [saveDataButtonText]="'Save'" [saveDataButtonEnabled] = "true"
+      [colorPickerEnabled]="true" [lineWidth]="7"
+      (onBatchUpdate)="sendBatchUpdate($event)" (onClear)="onCanvasClear()" (onUndo)="onCanvasUndo($event)" (onRedo)="onCanvasRedo($event)" (onSave)="onCanvasSave($event)">
+    </canvas-whiteboard>
+</div>

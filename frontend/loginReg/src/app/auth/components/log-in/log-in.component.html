@@ -1,0 +1,29 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayoutAlign="center">
+    <mat-card class="cards" >
+         <div fxLayout="row" fxLayoutAlign="center center"><i style="font-size: xx-large" class="material-icons">dashboard</i></div>
+         <div fxLayout="row" fxLayoutAlign="center center"><h1 class="sign">Sign in</h1></div>
+         <div fxLayout="row" fxLayoutAlign="center center"><span>Use your Trello User Name</span></div>
+         <div fxLayout="row" style="padding: 40px 0px 0px 0px;">
+           <form class="example-form" [formGroup]="UserForm">
+             <mat-card-content fxLayout="column">
+               <mat-form-field class="example-full-width">
+                 <input type="text" formControlName="username" matInput placeholder="Username">
+               </mat-form-field>
+
+               <mat-form-field class="example-full-width">
+                 <input type="password" formControlName="password" matInput placeholder="Password">
+               </mat-form-field>
+             </mat-card-content>
+            <mat-card-actions>
+              <a mat-button color="primary" class="login" routerLink="/register" routerLinkActive="active">Register</a>
+              <button mat-raised-button color="primary" [disabled]="UserForm.invalid" (click)="Login()" style="float: right;line-height: 34px;
+              border-radius: 40px;width: 90px;  border-radius: 50px;
+                                                border: 0px;
+                                                box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);" >Next</button>
+            </mat-card-actions>
+         </form>
+       </div>
+    </mat-card>
+  </div>
+</div>

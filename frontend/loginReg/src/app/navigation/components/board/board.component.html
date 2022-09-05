@@ -1,0 +1,38 @@
+<button class="add" mat-stroked-button color="primary" (click)="AddTask()">
+     <i style="padding: 3px 10px 3px 0px; font-size: 33px" class="material-icons">add</i>New</button>
+<div cdkDropListGroup class="draglist" fxLayout="row" fxLayoutAlign="top top">
+  <div class="example-container custom">
+      <h2>To Do</h2>
+      <div
+          cdkDropList
+          [cdkDropListData]="todo"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of todo; let i = index" cdkDrag (click)="EditTask(item, 'TD',i)">
+            {{item}}
+          </div>
+      </div>
+  </div>
+  <div class="example-container custom">
+      <h2>In Progress</h2>
+
+      <div
+          cdkDropList
+          [cdkDropListData]="test"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of test; let i = index" cdkDrag (click)="EditTask(item, 'T',i)">{{item}}</div>
+      </div>
+  </div>
+  <div class="example-container custom">
+      <h2>Done</h2>
+
+      <div
+          cdkDropList
+          [cdkDropListData]="done"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of done; let i = index" cdkDrag (click)="EditTask(item, 'D',i)">{{item}}</div>
+      </div>
+  </div>
+</div>

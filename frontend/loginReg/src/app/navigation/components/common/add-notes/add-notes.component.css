@@ -1,0 +1,38 @@
+.box:before {
+  background: transparent !important
+}
+.box{
+  margin: 10px 0px 0px 60px;
+  width: fit-content;
+  background: #f3f3f38a;
+}
+.description{
+  min-height: 100px;
+}
+.taskForm{
+  width: fit-content;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.cards{
+  display: grid;
+  padding: 0px 50px 50px 50px;
+}
+.mat-form-field-infix {
+  min-width: 300px;
+}
+.status{
+  padding: 0px 0px 0px 270px;
+  font-family: fantasy;
+}
+.status-value{
+  padding: 0px 0px 0px 5px;
+  font-family: fantasy;
+  color: #2a3da7;
+}
+.title{
+  color: #3f51b5;
+  font-size: large
+}
